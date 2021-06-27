@@ -5,12 +5,15 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
 
 import java.util.List;
 
 public class BaseTests {
 
     private WebDriver driver;
+
+    protected HomePage homePage;
 
     public void setUp () {
 
@@ -20,15 +23,17 @@ public class BaseTests {
 
         driver.get("https://the-internet.herokuapp.com/");
 
+        homePage = new HomePage(driver);
+
 //        driver.manage().window().maximize();
 //        driver.manage().window().fullscreen();
 //        driver.manage().window().setSize(new Dimension(300, 300));
 //
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-        System.out.println ("The number of websites: "+links.size());
-
-        WebElement inputsLink = driver.findElement(By.linkText("Inputs"));
-        inputsLink.click();
+//        List<WebElement> links = driver.findElements(By.tagName("a"));
+//        System.out.println ("The number of websites: "+links.size());
+//
+//        WebElement inputsLink = driver.findElement(By.linkText("Inputs"));
+//        inputsLink.click();
 
 
 
