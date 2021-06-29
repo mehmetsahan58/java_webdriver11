@@ -26,7 +26,7 @@ public class LoginPage {
 
     public void setPassword (String password) {
 
-        driver.findElement(passwordField).sendKeys();
+        driver.findElement(passwordField).sendKeys(password);
 
     }
 
