@@ -7,6 +7,8 @@ public class SecureAreaPage {
 
     private WebDriver driver;
 
+
+
     private By statusAlert = By.id("flash");
 
     public SecureAreaPage (WebDriver driver) {

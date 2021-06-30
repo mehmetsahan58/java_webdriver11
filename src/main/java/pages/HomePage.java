@@ -9,6 +9,8 @@ public class HomePage {
 
     private By formAuthenticationLink = By.linkText("Form Authentication");
 
+    private By forgotPassword = By.linkText("Forgot Password");
+
     public HomePage (WebDriver driver) {
 
         this.driver = driver;
@@ -20,6 +22,12 @@ public class HomePage {
 
         return new LoginPage (driver);
     }
+
+  public ForgotPasswordPage clickForgotPassword () {
+        driver.findElement(forgotPassword).click();
+
+        return new ForgotPasswordPage (driver);
+  }
 
 
 }
