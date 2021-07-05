@@ -49,6 +49,33 @@ public class HomePage {
         return new DropdownPage1(driver);
     }
 
+    public HoversPage clickHovers () {
+
+        clickLink("Hovers");
+
+        return new HoversPage (driver);
+    }
+
+    public AddRemoveElementsPage clickAddRemoveElements () {
+
+        clickLink("Add/Remove Elements");
+        return new AddRemoveElementsPage (driver);
+    }
+
+    public KeyPressesPage clickKeyPresses () {
+
+        clickLink("Key Presses");
+
+        return new KeyPressesPage(driver);
+    }
+
+    public HorizontalSliderPage clickHorizontalSlider () {
+
+        clickLink("Horizontal Slider");
+
+        return new HorizontalSliderPage(driver);
+    }
+
 
 
 
